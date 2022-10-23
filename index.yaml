@@ -3,6 +3,15 @@ entries:
   olm:
   - apiVersion: v2
     appVersion: v0.22.0
+    created: "2022-10-23T13:12:54.824509578Z"
+    description: A Helm chart for Kubernetes
+    digest: 4921fde98d3c384d25336122ff60631b701d478a86a83c215ebc249db85ec31b
+    name: olm
+    urls:
+    - https://github.com/logscale-contrib/helm-olm/releases/download/v1.1.4/olm-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: v0.22.0
     created: "2022-10-23T12:50:50.599937534Z"
     description: A Helm chart for Kubernetes
     digest: cfcb1d57a32d5101906d6f68d30b9d0f56530824c3b692e8320a68cc76613b6c
@@ -28,4 +37,4 @@ entries:
     urls:
     - https://github.com/logscale-contrib/helm-olm/releases/download/v1.1.1/olm-1.1.1.tgz
     version: 1.1.1
-generated: "2022-10-23T12:50:50.595036752Z"
+generated: "2022-10-23T13:12:54.819811702Z"
