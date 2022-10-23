@@ -1,3 +1,4 @@
+{{ if .Capabilities.APIVersions.Has "config.openshift.io/v1" -}}
 {{- if .Values.imagestream }}
 apiVersion: config.openshift.io/v1
 kind: ClusterOperator
@@ -28,3 +29,4 @@ status:
       version: "0.0.1-snapshot"
 {{- end }}      
 {{- end }}
+{{ end }}

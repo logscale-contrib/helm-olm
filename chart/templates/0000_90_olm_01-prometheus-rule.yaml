@@ -1,3 +1,4 @@
+{{ if .Capabilities.APIVersions.Has "monitoring.coreos.com/v1" -}}
 {{ if .Values.monitoring.enabled }}
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
@@ -41,4 +42,5 @@ spec:
         summary: API returned a warning when modifying an operator
         description: Fires whenever the API server returns a warning when attempting to modify an operator.
         message: The API server returned a warning during installation or upgrade of an operator. An Event with reason "AppliedWithWarnings" has been created with complete details, including a reference to the InstallPlan step that generated the warning.
+{{ end }}
 {{ end }}
