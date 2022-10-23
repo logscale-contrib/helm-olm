@@ -69,7 +69,7 @@ spec:
           - {{ .Values.catalog.opmImageArgs }}
           {{- end }}
           - --util-image
-          -  {{ .Values.catalog.image.ref }}
+          - "{{ .Values.catalog.image.repository }}:{{ .Values.catalog.image.tag | default .Chart.AppVersion }}"
           {{- if .Values.writeStatusNameCatalog }}
           - --writeStatusName
           - {{ .Values.writeStatusNameCatalog }}
