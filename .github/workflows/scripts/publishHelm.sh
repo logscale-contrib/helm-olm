@@ -2,7 +2,7 @@
 set -ev
 #helm push $(ls ${GITHUB_REPOSITORY#*/}*.tgz) oci://ghcr.io/$GITHUB_REPOSITORY/charts
 #
-helm push $(ls helm-logscale*.tgz) oci://ghcr.io/$GITHUB_REPOSITORY/charts
+helm push $(ls *.tgz) oci://ghcr.io/$GITHUB_REPOSITORY/charts
 #
 mkdir /tmp/gh-pages
 wget https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/index.yaml -P /tmp/
