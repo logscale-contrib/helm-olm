@@ -26,9 +26,9 @@ spec:
       containers:
       - name: packageserver
         securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
           allowPrivilegeEscalation: false
           capabilities:
             drop: [ "ALL" ]
