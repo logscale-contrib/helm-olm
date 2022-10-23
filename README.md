@@ -4,3 +4,4 @@ This chart is a fork of the unpublished offical chart located https://github.com
 
 * Use the app version from Chart.yaml to pin a version
 * Use image pull policy IfNotPresent
+* Condition monitoring resources on the CRD being present to allow for a boot strap
