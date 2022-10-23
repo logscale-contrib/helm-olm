@@ -22,7 +22,7 @@ olm:
     pullPolicy: IfNotPresent
   service:
     internalPort: 8080
-    externalPort: metrics
+    externalPort: 8080
   # tlsSecret: olm-operator-serving-cert
   # clientCASecret: pprof-serving-cert
   nodeSelector:
@@ -41,7 +41,7 @@ catalog:
     pullPolicy: IfNotPresent
   service:
     internalPort: 8080
-    externalPort: metrics
+    externalPort: 8080
   # tlsSecret: catalog-operator-serving-cert
   # clientCASecret: pprof-serving-cert
   nodeSelector:
