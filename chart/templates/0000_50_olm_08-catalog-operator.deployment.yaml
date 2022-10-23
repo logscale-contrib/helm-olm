@@ -17,10 +17,6 @@ spec:
       labels:
         app: catalog-operator
     spec:
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
       serviceAccountName: olm-operator-serviceaccount
       {{- if or .Values.catalog.tlsSecret .Values.catalog.clientCASecret }}
       volumes:
@@ -38,6 +34,9 @@ spec:
       containers:
         - name: catalog-operator
           securityContext:
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
             allowPrivilegeEscalation: false
             capabilities:
               drop: [ "ALL" ]

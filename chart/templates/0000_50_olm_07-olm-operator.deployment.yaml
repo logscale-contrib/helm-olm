@@ -17,10 +17,6 @@ spec:
       labels:
         app: olm-operator
     spec:
-      securityContext:
-        runAsNonRoot: true
-        seccompProfile:
-          type: RuntimeDefault
       serviceAccountName: olm-operator-serviceaccount
       {{- if or .Values.olm.tlsSecret .Values.olm.clientCASecret }}
       volumes: 
@@ -38,6 +34,9 @@ spec:
       containers:
         - name: olm-operator
           securityContext:
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
             allowPrivilegeEscalation: false
             capabilities:
               drop: [ "ALL" ]
