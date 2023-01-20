@@ -41,7 +41,7 @@ jobs:
           node-version: "18"
       - name: Semantic Release
         id: version
-        uses: cycjimmy/semantic-release-action@v3.1.2
+        uses: cycjimmy/semantic-release-action@v3.2.0
         with:
           semantic_version: 19
           extra_plugins: |
@@ -102,7 +102,7 @@ jobs:
       - name: Semantic Release
         if: github.event_name != 'pull_request'
         id: version
-        uses: cycjimmy/semantic-release-action@v3.1.2
+        uses: cycjimmy/semantic-release-action@v3.2.0
         with:
           semantic_version: 19
           extra_plugins: |
