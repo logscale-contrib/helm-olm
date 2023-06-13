@@ -56,7 +56,7 @@ jobs:
           REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
       - name: Docker meta
         id: docker_action_meta
-        uses: docker/metadata-action@v4.3.0
+        uses: docker/metadata-action@v4.6.0
         with:
           images: ghcr.io/${{ github.repository }}/container
           flavor: |
