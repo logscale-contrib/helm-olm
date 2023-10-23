@@ -36,7 +36,7 @@ jobs:
         run: echo "::set-output name=defined::true"
         env:
           MY_KEY: ${{ secrets.DOCKER_PASS }}
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "18"
       - name: Semantic Release
@@ -94,7 +94,7 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | helm registry login --password-stdin -u ${{ github.repository_owner }} ghcr.io/${{ github.repository_owner }}
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "18"
       - uses: azure/setup-helm@v3
