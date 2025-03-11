@@ -38,7 +38,7 @@ jobs:
           MY_KEY: ${{ secrets.DOCKER_PASS }}
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
       - name: Semantic Release
         id: version
         uses: cycjimmy/semantic-release-action@v3.2.0
@@ -96,7 +96,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
       - uses: azure/setup-helm@v3
 
       - name: Semantic Release
